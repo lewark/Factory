@@ -10,11 +10,16 @@ public class PlayerController : MonoBehaviour
     public Animator animator;
 
     public GameObject viewCamera;
-    public float moveSpeed = 1f;
-    public float jumpVelocity = 1f;
-    public float gravity = 1f;
+    public float moveSpeed = 4f;
+    public float jumpVelocity = 2.5f;
+    public float gravity = 4f;
+    public float baseDownVelocity = 0.1f;
+    //public float coyoteTime = 0.1f;
 
     float velocityY = 0;
+
+
+    //float offGroundTime = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -25,7 +30,9 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        bool isOnGround = controller.isGrounded;
+        //UpdateOnGround();
+
+        bool isOnGround = controller.isGrounded; //IsOnGround();
 
         animator.SetBool("isOnGround", isOnGround);
         if (isOnGround)
@@ -62,10 +69,26 @@ public class PlayerController : MonoBehaviour
             moveDir = moveDir.normalized;
         }
 
-        moveDir.y = velocityY - 0.1f;
+        moveDir.y = velocityY - baseDownVelocity;
 
         controller.Move(moveSpeed * Time.deltaTime * moveDir);
-
-        animator.SetBool("isOnGround", controller.isGrounded);
     }
+
+    // https://stackoverflow.com/questions/53463043/unity-grounded-state-is-flickering-for-character-isgrounded-being-used-but-sti
+    /*void UpdateOnGround()
+    {
+        if (controller.isGrounded)
+        {
+            offGroundTime = 0;
+        }
+        else
+        {
+            offGroundTime += Time.deltaTime;
+        }
+    }
+
+    bool IsOnGround()
+    {
+        return offGroundTime < coyoteTime;
+    }*/
 }
