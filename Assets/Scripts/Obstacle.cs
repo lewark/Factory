@@ -2,15 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Obstacle : GameEnder
+public class Obstacle : MonoBehaviour
 {
     public EndMenu endMenu;
 
-    protected override string endOnTouch {
-        get { return "Player"; }
+    public void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Player")
+        {
+            OnGameEnd();
+        }
     }
 
-    protected override void OnGameEnd()
+    protected void OnGameEnd()
     {
         endMenu.hasWon = false;
         endMenu.Enable();

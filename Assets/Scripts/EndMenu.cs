@@ -33,7 +33,7 @@ public class EndMenu : Menu
     public void RestartButton()
     {
         Disable();
-        UnityEngine.SceneManagement.SceneManager.LoadScene("Simple Game");
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Factory");
     }
 
     public void QuitButton()
