@@ -61,7 +61,7 @@ public class ElecDoor : MonoBehaviour
         if (this.open != open)
         {
             this.open = open;
-            progress = 0;
+            progress = 1 - progress;
             boxCollider.enabled = !open;
         }
     }
