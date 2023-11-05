@@ -41,19 +41,23 @@ public class ElecDoor : MonoBehaviour
 
             float doorPos = openProgress * openPos + (1 - openProgress) * closedPos;
 
-            SetX(leftDoor, -doorPos);
-            SetX(rightDoor, doorPos);
+            SetDoorPos(doorPos);
         }
-    }
-
-    private void SetX(GameObject obj, float x)
-    {
-        obj.transform.localPosition = new Vector3(x, obj.transform.localPosition.y, obj.transform.localPosition.z);
     }
 
     public void ToggleOpen()
     {
         SetOpen(!open);
+    }
+    
+    public void SetDoorPos(float doorPos)
+    {
+        SetX(leftDoor, -doorPos);
+        SetX(rightDoor, doorPos);
+    }
+    private void SetX(GameObject obj, float x)
+    {
+        obj.transform.localPosition = new Vector3(x, obj.transform.localPosition.y, obj.transform.localPosition.z);
     }
 
     public void SetOpen(bool open)
