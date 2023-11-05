@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ElecDoor : TriggerObject
+public class ElecDoor : MonoBehaviour
 {
     private float openTime = 0.5f;
     private float closedPos = 0.46f;
@@ -51,10 +51,18 @@ public class ElecDoor : TriggerObject
         obj.transform.localPosition = new Vector3(x, obj.transform.localPosition.y, obj.transform.localPosition.z);
     }
 
-    override public void Trigger()
+    public void ToggleOpen()
     {
-        open = !open;
-        progress = 0;
-        boxCollider.enabled = !open;
+        SetOpen(!open);
+    }
+
+    public void SetOpen(bool open)
+    {
+        if (this.open != open)
+        {
+            this.open = open;
+            progress = 0;
+            boxCollider.enabled = !open;
+        }
     }
 }

@@ -51,7 +51,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 549434949221648127, guid: b20a697764513054d99bce003ed8f48c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 549434949221648127, guid: b20a697764513054d99bce003ed8f48c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -93,6 +93,34 @@ PrefabInstance:
       propertyPath: triggerObject
       value: 
       objectReference: {fileID: 3014276182484427921}
+    - target: {fileID: 9193222333627194424, guid: b20a697764513054d99bce003ed8f48c, type: 3}
+      propertyPath: onSwitchTriggered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9193222333627194424, guid: b20a697764513054d99bce003ed8f48c, type: 3}
+      propertyPath: onSwitchTriggered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9193222333627194424, guid: b20a697764513054d99bce003ed8f48c, type: 3}
+      propertyPath: onSwitchTriggered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 3014276182484427921}
+    - target: {fileID: 9193222333627194424, guid: b20a697764513054d99bce003ed8f48c, type: 3}
+      propertyPath: onSwitchTriggered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9193222333627194424, guid: b20a697764513054d99bce003ed8f48c, type: 3}
+      propertyPath: onSwitchTriggered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ToggleOpen
+      objectReference: {fileID: 0}
+    - target: {fileID: 9193222333627194424, guid: b20a697764513054d99bce003ed8f48c, type: 3}
+      propertyPath: onSwitchTriggered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ElecDoor, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 9193222333627194424, guid: b20a697764513054d99bce003ed8f48c, type: 3}
+      propertyPath: onSwitchTriggered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b20a697764513054d99bce003ed8f48c, type: 3}
 --- !u!4 &228132809653757322 stripped
@@ -117,7 +145,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 549434949221648127, guid: b20a697764513054d99bce003ed8f48c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 549434949221648127, guid: b20a697764513054d99bce003ed8f48c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -159,6 +187,34 @@ PrefabInstance:
       propertyPath: triggerObject
       value: 
       objectReference: {fileID: 3014276182484427921}
+    - target: {fileID: 9193222333627194424, guid: b20a697764513054d99bce003ed8f48c, type: 3}
+      propertyPath: onSwitchTriggered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9193222333627194424, guid: b20a697764513054d99bce003ed8f48c, type: 3}
+      propertyPath: onSwitchTriggered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9193222333627194424, guid: b20a697764513054d99bce003ed8f48c, type: 3}
+      propertyPath: onSwitchTriggered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 3014276182484427921}
+    - target: {fileID: 9193222333627194424, guid: b20a697764513054d99bce003ed8f48c, type: 3}
+      propertyPath: onSwitchTriggered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9193222333627194424, guid: b20a697764513054d99bce003ed8f48c, type: 3}
+      propertyPath: onSwitchTriggered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ToggleOpen
+      objectReference: {fileID: 0}
+    - target: {fileID: 9193222333627194424, guid: b20a697764513054d99bce003ed8f48c, type: 3}
+      propertyPath: onSwitchTriggered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ElecDoor, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 9193222333627194424, guid: b20a697764513054d99bce003ed8f48c, type: 3}
+      propertyPath: onSwitchTriggered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b20a697764513054d99bce003ed8f48c, type: 3}
 --- !u!4 &1824048690053641010 stripped

@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Scanner : MonoBehaviour
 {
+    public UnityEvent onSwitchTriggered;
+
     public GameObject cursor;
-    public TriggerObject triggerObject;
 
     bool playerNear = false;
 
@@ -20,7 +22,7 @@ public class Scanner : MonoBehaviour
     {
         if (playerNear && Input.GetButtonDown("Fire1"))
         {
-            triggerObject.Trigger();
+            onSwitchTriggered.Invoke();
         }
     }
 
