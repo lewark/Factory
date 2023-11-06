@@ -49,6 +49,11 @@ public class ElecDoor : MonoBehaviour
     {
         SetOpen(!open);
     }
+
+    public bool IsOpen()
+    {
+        return open;
+    }
     
     public void SetDoorPos(float doorPos)
     {

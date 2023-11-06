@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Elevator : MonoBehaviour
+public class Elevator : MovingPlatform
 {
     public ElecDoor elevatorDoor;
     public ElecDoor bottomDoor;
@@ -11,25 +11,25 @@ public class Elevator : MonoBehaviour
     bool topFloor = false;
     bool nextFloor = true;
 
-    float elevatorSpeed = 1f;
+    float elevatorSpeed = 2f;
     float topFloorPos = 0f;
 
     // Start is called before the first frame update
-    void Start()
+    public override void Start()
     {
         topFloorPos = topDoor.transform.localPosition.y;
+        base.Start();
     }
 
-    // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (!IsAtDestination())
         {
             MoveTowardDestination();
-            if (IsAtDestination())
-            {
-                OpenDestinationDoor();
-            }
+        }
+        else if (!elevatorDoor.IsOpen())
+        {
+            OpenDestinationDoor();
         }
     }
 
@@ -40,23 +40,25 @@ public class Elevator : MonoBehaviour
         {
             moveIncrement = -moveIncrement;
         }
-        SetElevatorPos(transform.localPosition.y + moveIncrement);
+        MovePlatform(new Vector3(0, moveIncrement, 0));
     }
 
     bool IsAtDestination()
     {
+        float position = GetRigidbody().transform.localPosition.y;
         if (topFloor)
         {
-            return transform.localPosition.y >= topFloorPos;
+            return position >= topFloorPos;
         }
         else
         {
-            return transform.localPosition.y <= 0;
+            return position <= 0;
         }
     }
 
     void OpenDestinationDoor()
     {
+        elevatorDoor.SetOpen(true);
         if (topFloor)
         {
             topDoor.SetOpen(true);
@@ -65,14 +67,13 @@ public class Elevator : MonoBehaviour
         {
             bottomDoor.SetOpen(true);
         }
-        elevatorDoor.SetOpen(true);
     }
 
     void CloseDoors()
     {
+        elevatorDoor.SetOpen(false);
         topDoor.SetOpen(false);
         bottomDoor.SetOpen(false);
-        elevatorDoor.SetOpen(false);
     }
 
     public void ElevatorButtonPressed(bool isTopFloor)
@@ -93,11 +94,6 @@ public class Elevator : MonoBehaviour
         {
             OpenDestinationDoor();
         }
-    }
-
-    void SetElevatorPos(float pos)
-    {
-        transform.localPosition = new Vector3(transform.localPosition.x, pos, transform.localPosition.z);
     }
 
     private void OnTriggerEnter(Collider other)
