@@ -49,8 +49,8 @@ public class RobotController : MonoBehaviour
         movement = walkSpeed * movement;
         bool isMoving = movement.magnitude > 0.01;
 
-        //rigidBody.MovePosition(rigidBody.position + movement*Time.deltaTime);
-        rigidBody.velocity = new Vector3(movement.x, rigidBody.velocity.y, movement.z);
+        rigidBody.MovePosition(rigidBody.position + movement*Time.deltaTime);
+        //rigidBody.velocity = new Vector3(movement.x, rigidBody.velocity.y, movement.z);
 
         if (isMoving)
         {

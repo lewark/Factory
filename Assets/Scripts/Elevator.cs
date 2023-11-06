@@ -9,7 +9,6 @@ public class Elevator : MovingPlatform
     public ElecDoor topDoor;
 
     bool topFloor = false;
-    bool nextFloor = true;
 
     float elevatorSpeed = 2f;
     float topFloorPos = 0f;
@@ -79,7 +78,6 @@ public class Elevator : MovingPlatform
     public void ElevatorButtonPressed(bool isTopFloor)
     {
         MoveElevatorTo(isTopFloor);
-        nextFloor = !isTopFloor;
     }
 
     void MoveElevatorTo(bool isTopFloor)
@@ -98,9 +96,9 @@ public class Elevator : MovingPlatform
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player")
+        if (other.tag == "Player" && IsAtDestination())
         {
-            MoveElevatorTo(nextFloor);
+            MoveElevatorTo(!topFloor);
         }
     }
 }

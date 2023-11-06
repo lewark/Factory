@@ -55,6 +55,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MovingPlatform Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 6863485319932546604, guid: 9526e2db57e281b4583dade604b51ab9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9526e2db57e281b4583dade604b51ab9, type: 3}
 --- !u!1 &1728906914981327470 stripped
@@ -62,19 +66,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 418644099103822386, guid: 9526e2db57e281b4583dade604b51ab9, type: 3}
   m_PrefabInstance: {fileID: 1310861105165770844}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &4865370735689250035
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1728906914981327470}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2.5474443, y: 2.1158898, z: 0.25038007}
-  m_Center: {x: -0.06213689, y: 0.057945494, z: 0.00020839274}
 --- !u!54 &8444732339291232900
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -91,3 +82,31 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &4865370735689250035
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1728906914981327470}
+  m_Material: {fileID: 13400000, guid: 591bd063cd095274ca9c782f0e5e643c, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.5474443, y: 2.1158898, z: 0.25038007}
+  m_Center: {x: -0.06213689, y: 0.057945494, z: 0.00020839274}
+--- !u!114 &2377946537087822504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1728906914981327470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96ac54732a351564891d7d517fe6434f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minPos: -6
+  maxPos: 3
+  speed: 2

@@ -10,7 +10,6 @@ public class MovingPlatform : MonoBehaviour
     virtual public void Start()
     {
         platformRigidBody = GetComponent<Rigidbody>();
-        print(platformRigidBody);
     }
 
     // Update is called once per frame
