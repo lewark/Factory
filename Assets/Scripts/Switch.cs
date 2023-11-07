@@ -11,6 +11,8 @@ public class Switch : Interactable
     {
         onSwitchTriggered.AddListener(FlipSwitch);
         base.Start();
+
+        onSwitchTriggered.Invoke(); // skip maze section
     }
 
     void FlipSwitch()

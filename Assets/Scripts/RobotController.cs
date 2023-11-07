@@ -15,12 +15,15 @@ public class RobotController : MonoBehaviour
     public float jumpStrength;
     private int onGround = 0;
     private bool input_jump = false;
-    
+
+    private Vector3 checkpoint;
+
     // Start is called before the first frame update
     void Start()
     {
         rigidBody = GetComponent<Rigidbody>();
         animator = GetComponentInChildren<Animator>();
+        SetCheckpoint(rigidBody.position);
     }
 
     // Update is called once per frame
@@ -79,10 +82,9 @@ public class RobotController : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        GameObject obj = collision.gameObject;
+        //GameObject obj = collision.gameObject;
 
-        //if (obj.tag == "Ground")
-        //{
+        //if (IsGroundCollision(collision)) {
             onGround += 1;
 
             animator.SetBool("isJumping", false);
@@ -93,7 +95,7 @@ public class RobotController : MonoBehaviour
     {
         GameObject obj = collision.gameObject;
 
-        //if (obj.tag == "Ground")
+        //if (IsGroundCollision(collision))
         //{
             onGround -= 1;
 
@@ -102,5 +104,22 @@ public class RobotController : MonoBehaviour
                 onGround = 0;
             }
         //}
+    }
+
+    /*bool IsOnGround()
+    {
+        return Physics.Raycast(rigidBody.transform.position, Vector3.down, 3f, ~(1 << 2), QueryTriggerInteraction.Ignore);
+    }*/
+
+    public void SetCheckpoint(Vector3 position)
+    {
+        print("checkpoint set");
+        checkpoint = position;
+    }
+
+    public void GoToCheckpoint()
+    {
+        rigidBody.position = checkpoint;
+        rigidBody.velocity = new Vector3();
     }
 }

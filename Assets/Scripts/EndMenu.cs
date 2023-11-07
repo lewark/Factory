@@ -7,6 +7,7 @@ public class EndMenu : Menu
     public TMPro.TMP_Text headerText;
     public TMPro.TMP_Text bodyText;
     public GameObject background;
+    public RobotController player;
 
     public bool hasWon = false;
 
@@ -33,7 +34,7 @@ public class EndMenu : Menu
     public void RestartButton()
     {
         Disable();
-        UnityEngine.SceneManagement.SceneManager.LoadScene("Factory");
+        player.GoToCheckpoint();
     }
 
     public void QuitButton()
