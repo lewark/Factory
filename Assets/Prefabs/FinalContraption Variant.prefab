@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2675087706598807940}
   m_LocalRotation: {x: -0.00000004082176, y: -1, z: -0, w: 0.00006133318}
-  m_LocalPosition: {x: 0, y: 0, z: 4}
+  m_LocalPosition: {x: -0, y: 0, z: 3.85}
   m_LocalScale: {x: 0.6666667, y: 0.6666667, z: 0.6666665}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -159,6 +159,37 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   cursor: {fileID: 6327951958421088570}
+--- !u!1 &9052224929701214169
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5341640820495040858}
+  m_Layer: 0
+  m_Name: GearParent
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5341640820495040858
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9052224929701214169}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.64, y: -2.41, z: 0.6}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5373760313532570233}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2222771791522847291
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -176,11 +207,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4774494283088996795, guid: ab7c5a17b04cd5a4fa330afdbe97a84a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.8889999
+      value: -1.89
       objectReference: {fileID: 0}
     - target: {fileID: 4774494283088996795, guid: ab7c5a17b04cd5a4fa330afdbe97a84a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.7390001
+      value: 1.68
       objectReference: {fileID: 0}
     - target: {fileID: 4774494283088996795, guid: ab7c5a17b04cd5a4fa330afdbe97a84a, type: 3}
       propertyPath: m_LocalRotation.w
@@ -424,7 +455,11 @@ MonoBehaviour:
   gear2: {fileID: 947653888436377202}
   mainCamera: {fileID: 0}
   contraptionCamera: {fileID: 7324012525140324767}
+  endMenu: {fileID: 0}
+  gearParent: {fileID: 9052224929701214169}
+  gearPrefab: {fileID: 4736663496437442325, guid: 47480903078acd2459f2a8112d632be5, type: 3}
   accel: 1
+  topSpeed: 10
 --- !u!4 &5373760313532570233 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: d526cf36b01319746b06ccfd7ce9c7e3, type: 3}

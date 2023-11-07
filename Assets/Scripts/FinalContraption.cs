@@ -14,11 +14,16 @@ public class FinalContraption : MonoBehaviour
 
     public EndMenu endMenu;
 
+    public GameObject gearParent;
+    public GameObject gearPrefab;
+
     public float accel = 2f;
     public float topSpeed = 10;
 
     bool rotating = false;
     float speed = 0;
+    float gearInterval = 100f;
+    float timeToGear = 7;
     // Start is called before the first frame update
     void Start()
     {
@@ -35,6 +40,22 @@ public class FinalContraption : MonoBehaviour
             gear1.transform.Rotate(new Vector3(0, 0, angleIncrement));
             gear2.transform.Rotate(new Vector3(0, 0, -angleIncrement));
 
+            contraptionCamera.transform.localPosition += new Vector3(0, 0, Time.deltaTime * 0.5f);
+
+            timeToGear -= Time.deltaTime;
+            if (timeToGear <= 0)
+            {
+                timeToGear = gearInterval / speed;
+                GameObject gearObj = Instantiate(gearPrefab, gearParent.transform);
+                Vector3 angle = new Vector3(Random.Range(-1f, 1f), 0, Random.Range(-1f, 1f)).normalized;
+                gearObj.transform.localPosition = angle * 10 + contraptionCamera.transform.localPosition - new Vector3(0,0,2); //new Vector3(0, Random.Range(-10f, 0f), 0);
+                float scale = Random.Range(0.5f, 1.0f);
+                gearObj.transform.localScale = new Vector3(scale, scale, scale);
+                LargeGear largeGear = gearObj.GetComponent<LargeGear>();
+                largeGear.speed = Random.Range(-10, 10);
+
+            }
+                
             if (speed >= topSpeed)
             {
                 endMenu.hasWon = true;

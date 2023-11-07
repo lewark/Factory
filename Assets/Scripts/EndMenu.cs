@@ -31,10 +31,21 @@ public class EndMenu : Menu
         }
     }
 
+    public void SetEndMessage(string endMessage)
+    {
+        bodyText.text = endMessage;
+    }
+
     public void RestartButton()
     {
         Disable();
-        player.GoToCheckpoint();
+        if (hasWon)
+        {
+            UnityEngine.SceneManagement.SceneManager.LoadScene("Factory");
+        }
+        else {
+            player.GoToCheckpoint();
+        }
     }
 
     public void QuitButton()

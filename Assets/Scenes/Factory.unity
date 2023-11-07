@@ -562,11 +562,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 71092672608145995, guid: b22943c8e356b244eb4dc6034cbbd4a2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.71
+      value: 1.69
       objectReference: {fileID: 0}
     - target: {fileID: 71092672608145995, guid: b22943c8e356b244eb4dc6034cbbd4a2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 17.24
+      value: 18.11
       objectReference: {fileID: 0}
     - target: {fileID: 71092672608145995, guid: b22943c8e356b244eb4dc6034cbbd4a2, type: 3}
       propertyPath: m_LocalRotation.w
@@ -599,6 +599,10 @@ PrefabInstance:
     - target: {fileID: 71092672608145997, guid: b22943c8e356b244eb4dc6034cbbd4a2, type: 3}
       propertyPath: m_Name
       value: Player2
+      objectReference: {fileID: 0}
+    - target: {fileID: 71092672608145997, guid: b22943c8e356b244eb4dc6034cbbd4a2, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 71092672608145997, guid: b22943c8e356b244eb4dc6034cbbd4a2, type: 3}
       propertyPath: m_IsActive
@@ -1103,7 +1107,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58997eee5f4c05644a39500549f80916, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
+  speed: -20
   sineAmplitude: 0
   sineSpeed: 0
   sinePhase: 0
@@ -1161,6 +1165,11 @@ GameObject:
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8536899466802985918, guid: 6410b0117ffc20f4f9f373eca415b29a, type: 3}
   m_PrefabInstance: {fileID: 1589724498}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &840741712 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5373760313532570233, guid: 780572cc01cf68845b0bcb454a06544f, type: 3}
+  m_PrefabInstance: {fileID: 4373618733252743505}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &856289369
 GameObject:
@@ -1320,6 +1329,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   endMenu: {fileID: 797788098}
+  endMessage: Anyone have a ladder?
 --- !u!114 &883528745 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3011474994751981092, guid: 2829d8f4f74e0af4c9c6a6d09182d074, type: 3}
@@ -1562,6 +1572,37 @@ Transform:
   - {fileID: 1934482905}
   m_Father: {fileID: 0}
   m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &924043874
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 924043875}
+  m_Layer: 0
+  m_Name: Gears
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &924043875
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 924043874}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.48, y: -2.032, z: 0.975}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 840741712}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &938693652 stripped
 GameObject:
@@ -1964,7 +2005,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58997eee5f4c05644a39500549f80916, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
+  speed: -20
   sineAmplitude: 0
   sineSpeed: 0
   sinePhase: 0
@@ -2072,6 +2113,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   endMenu: {fileID: 797788098}
+  endMessage: Ouch.
 --- !u!65 &1462588358
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3231,7 +3273,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58997eee5f4c05644a39500549f80916, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: -20
+  speed: 20
   sineAmplitude: 0
   sineSpeed: 0
   sinePhase: 0
@@ -3801,6 +3843,10 @@ PrefabInstance:
     - target: {fileID: 4744751270311690435, guid: 780572cc01cf68845b0bcb454a06544f, type: 3}
       propertyPath: m_Name
       value: FinalContraption
+      objectReference: {fileID: 0}
+    - target: {fileID: 5341640820495040858, guid: 780572cc01cf68845b0bcb454a06544f, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5373760313532570233, guid: 780572cc01cf68845b0bcb454a06544f, type: 3}
       propertyPath: m_RootOrder

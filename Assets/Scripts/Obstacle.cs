@@ -5,6 +5,7 @@ using UnityEngine;
 public class Obstacle : MonoBehaviour
 {
     public EndMenu endMenu;
+    public string endMessage;
 
     public void OnTriggerEnter(Collider other)
     {
@@ -18,5 +19,6 @@ public class Obstacle : MonoBehaviour
     {
         endMenu.hasWon = false;
         endMenu.Enable();
+        endMenu.SetEndMessage(endMessage);
     }
 }
