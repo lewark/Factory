@@ -562,11 +562,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 71092672608145995, guid: b22943c8e356b244eb4dc6034cbbd4a2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.69
+      value: 1.99
       objectReference: {fileID: 0}
     - target: {fileID: 71092672608145995, guid: b22943c8e356b244eb4dc6034cbbd4a2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 18.11
+      value: 16.63
       objectReference: {fileID: 0}
     - target: {fileID: 71092672608145995, guid: b22943c8e356b244eb4dc6034cbbd4a2, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3894,7 +3894,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5815988852457564428, guid: 780572cc01cf68845b0bcb454a06544f, type: 3}
       propertyPath: accel
-      value: 50
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 5815988852457564428, guid: 780572cc01cf68845b0bcb454a06544f, type: 3}
       propertyPath: player
@@ -3906,12 +3906,16 @@ PrefabInstance:
       objectReference: {fileID: 797788098}
     - target: {fileID: 5815988852457564428, guid: 780572cc01cf68845b0bcb454a06544f, type: 3}
       propertyPath: topSpeed
-      value: 750
+      value: 600
       objectReference: {fileID: 0}
     - target: {fileID: 5815988852457564428, guid: 780572cc01cf68845b0bcb454a06544f, type: 3}
       propertyPath: mainCamera
       value: 
       objectReference: {fileID: 894033373}
+    - target: {fileID: 5815988852457564428, guid: 780572cc01cf68845b0bcb454a06544f, type: 3}
+      propertyPath: timeToGear
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 780572cc01cf68845b0bcb454a06544f, type: 3}
 --- !u!1001 &4723686195468742889

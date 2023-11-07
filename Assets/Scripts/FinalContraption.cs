@@ -22,8 +22,8 @@ public class FinalContraption : MonoBehaviour
 
     bool rotating = false;
     float speed = 0;
-    float gearInterval = 100f;
-    float timeToGear = 7;
+    public float gearInterval = 100f;
+    public float timeToGear = 7;
     // Start is called before the first frame update
     void Start()
     {
