@@ -21,8 +21,8 @@ public class EndMenu : Menu
 
         if (hasWon)
         {
-            headerText.text = "Win";
-            bodyText.text = "You won the game";
+            headerText.text = "The End";
+            bodyText.text = "";
         } else
         {
             headerText.text = "Game Over";
