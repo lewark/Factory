@@ -26,17 +26,17 @@ public class GearSystem : MonoBehaviour
         time += Time.deltaTime;
         float rotation = time * speed + Mathf.Sin(time * sineSpeed + sinePhase) * sineAmplitude;
 
-        Quaternion angle = Quaternion.Euler(0, 0, rotation);
-        transform.rotation = angle;
+        Quaternion angle = Quaternion.Euler(90, rotation, 0);
+        transform.localRotation = angle;
         foreach (GameObject obj in forwardGears)
         {
-            obj.transform.rotation = angle;
+            obj.transform.localRotation = angle;
         }
 
-        angle = Quaternion.Euler(0, 0, -rotation);
+        angle = Quaternion.Euler(90, -rotation, 0);
         foreach (GameObject obj in reverseGears)
         {
-            obj.transform.rotation = angle;
+            obj.transform.localRotation = angle;
         }
     }
 }

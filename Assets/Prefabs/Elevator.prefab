@@ -41,6 +41,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4192304210502202975}
     m_Modifications:
+    - target: {fileID: 1768144382132932599, guid: 4fd15f15ef1228641b8ad8b61f5abb2e, type: 3}
+      propertyPath: onSwitchTriggered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1768144382132932599, guid: 4fd15f15ef1228641b8ad8b61f5abb2e, type: 3}
+      propertyPath: onSwitchTriggered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1768144382132932599, guid: 4fd15f15ef1228641b8ad8b61f5abb2e, type: 3}
+      propertyPath: onSwitchTriggered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 8368630681744259145}
+    - target: {fileID: 1768144382132932599, guid: 4fd15f15ef1228641b8ad8b61f5abb2e, type: 3}
+      propertyPath: onSwitchTriggered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1768144382132932599, guid: 4fd15f15ef1228641b8ad8b61f5abb2e, type: 3}
+      propertyPath: onSwitchTriggered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ElevatorButtonPressed
+      objectReference: {fileID: 0}
+    - target: {fileID: 1768144382132932599, guid: 4fd15f15ef1228641b8ad8b61f5abb2e, type: 3}
+      propertyPath: onSwitchTriggered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Elevator, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1768144382132932599, guid: 4fd15f15ef1228641b8ad8b61f5abb2e, type: 3}
+      propertyPath: onSwitchTriggered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 6014270179039050543, guid: 4fd15f15ef1228641b8ad8b61f5abb2e, type: 3}
       propertyPath: m_Name
       value: BottomDoor
@@ -167,6 +195,10 @@ PrefabInstance:
       value: Elevator
       objectReference: {fileID: 0}
     - target: {fileID: 5958438921693756439, guid: 226d548fcd8581447933c4a1256fbd59, type: 3}
+      propertyPath: m_Range
+      value: 6.490298
+      objectReference: {fileID: 0}
+    - target: {fileID: 5958438921693756439, guid: 226d548fcd8581447933c4a1256fbd59, type: 3}
       propertyPath: m_Intensity
       value: 2
       objectReference: {fileID: 0}
@@ -252,6 +284,38 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4192304210502202975}
     m_Modifications:
+    - target: {fileID: 1768144382132932599, guid: 4fd15f15ef1228641b8ad8b61f5abb2e, type: 3}
+      propertyPath: onSwitchTriggered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1768144382132932599, guid: 4fd15f15ef1228641b8ad8b61f5abb2e, type: 3}
+      propertyPath: onSwitchTriggered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1768144382132932599, guid: 4fd15f15ef1228641b8ad8b61f5abb2e, type: 3}
+      propertyPath: onSwitchTriggered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 8368630681744259145}
+    - target: {fileID: 1768144382132932599, guid: 4fd15f15ef1228641b8ad8b61f5abb2e, type: 3}
+      propertyPath: onSwitchTriggered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1768144382132932599, guid: 4fd15f15ef1228641b8ad8b61f5abb2e, type: 3}
+      propertyPath: onSwitchTriggered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ElevatorButtonPressed
+      objectReference: {fileID: 0}
+    - target: {fileID: 1768144382132932599, guid: 4fd15f15ef1228641b8ad8b61f5abb2e, type: 3}
+      propertyPath: onSwitchTriggered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Elevator, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1768144382132932599, guid: 4fd15f15ef1228641b8ad8b61f5abb2e, type: 3}
+      propertyPath: onSwitchTriggered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1768144382132932599, guid: 4fd15f15ef1228641b8ad8b61f5abb2e, type: 3}
+      propertyPath: onSwitchTriggered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 6014270179039050543, guid: 4fd15f15ef1228641b8ad8b61f5abb2e, type: 3}
       propertyPath: m_Name
       value: TopDoor
