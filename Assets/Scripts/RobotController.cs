@@ -33,6 +33,11 @@ public class RobotController : MonoBehaviour
         {
             input_jump = true;
         }
+
+        if (Input.GetButtonDown("Fire1"))
+        {
+            animator.Play("Interact");
+        }
     }
     
     void FixedUpdate() {
