@@ -2385,6 +2385,14 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2925919973687440031, guid: 6410b0117ffc20f4f9f373eca415b29a, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 3183145743309499610, guid: 6410b0117ffc20f4f9f373eca415b29a, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 3663630485011064537, guid: 6410b0117ffc20f4f9f373eca415b29a, type: 3}
       propertyPath: m_Range
       value: 13.779317
@@ -2413,6 +2421,14 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 6541492270316386198, guid: 6410b0117ffc20f4f9f373eca415b29a, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 6580508669225252355, guid: 6410b0117ffc20f4f9f373eca415b29a, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 6763655534127126296, guid: 6410b0117ffc20f4f9f373eca415b29a, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -2440,6 +2456,25 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: -4569374406766817869, guid: 6410b0117ffc20f4f9f373eca415b29a, type: 3}
   m_PrefabInstance: {fileID: 1589724498}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1589724500 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6580508669225252355, guid: 6410b0117ffc20f4f9f373eca415b29a, type: 3}
+  m_PrefabInstance: {fileID: 1589724498}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &1589724501
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1589724500}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -3984235018261020551, guid: 6410b0117ffc20f4f9f373eca415b29a, type: 3}
 --- !u!1 &1602482246 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -6736904889666067567, guid: 6410b0117ffc20f4f9f373eca415b29a, type: 3}
