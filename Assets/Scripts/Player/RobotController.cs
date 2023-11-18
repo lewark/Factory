@@ -82,28 +82,29 @@ public class RobotController : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        //GameObject obj = collision.gameObject;
-
-        //if (IsGroundCollision(collision)) {
+        if (IsGroundCollision(collision)) {
             onGround += 1;
 
             animator.SetBool("isJumping", false);
-        //}
+        }
     }
 
     void OnCollisionExit(Collision collision)
     {
-        GameObject obj = collision.gameObject;
-
-        //if (IsGroundCollision(collision))
-        //{
+        if (IsGroundCollision(collision))
+        {
             onGround -= 1;
 
             if (onGround < 0)
             {
                 onGround = 0;
             }
-        //}
+        }
+    }
+
+    bool IsGroundCollision(Collision collision)
+    {
+        return collision.gameObject.CompareTag("Ground");
     }
 
     /*bool IsOnGround()

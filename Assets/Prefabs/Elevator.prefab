@@ -190,9 +190,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 540614578862958230, guid: 226d548fcd8581447933c4a1256fbd59, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 226d548fcd8581447933c4a1256fbd59, type: 3}
       propertyPath: m_Name
       value: Elevator
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 226d548fcd8581447933c4a1256fbd59, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 5958438921693756439, guid: 226d548fcd8581447933c4a1256fbd59, type: 3}
       propertyPath: m_Range
@@ -221,7 +229,7 @@ MeshCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1751219537259226957}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 591bd063cd095274ca9c782f0e5e643c, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
@@ -256,7 +264,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2233959936532965496}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 4afe55596bc365f448ee9b3dce73913b, type: 2}
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
