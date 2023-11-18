@@ -7,6 +7,8 @@ public class RobotController : MonoBehaviour
     private Rigidbody rigidBody;
     private Animator animator;
     public GameObject robotCamera;
+    public AudioClip jumpSound;
+    public AudioClip landSound;
     
     public float walkSpeed;
     private float input_right = 0;
@@ -17,11 +19,13 @@ public class RobotController : MonoBehaviour
     private bool input_jump = false;
 
     private Vector3 checkpoint;
+    private AudioSource audioSource;
 
     // Start is called before the first frame update
     void Start()
     {
         rigidBody = GetComponent<Rigidbody>();
+        audioSource = GetComponent<AudioSource>();
         animator = GetComponentInChildren<Animator>();
         SetCheckpoint(rigidBody.position);
     }
@@ -34,6 +38,7 @@ public class RobotController : MonoBehaviour
     
         if (onGround > 0 && Input.GetButtonDown("Jump"))
         {
+            audioSource.PlayOneShot(jumpSound);
             input_jump = true;
         }
 
@@ -84,6 +89,11 @@ public class RobotController : MonoBehaviour
     {
         if (IsGroundCollision(collision)) {
             onGround += 1;
+
+            if (onGround == 1)
+            {
+                audioSource.PlayOneShot(landSound);
+            }
 
             animator.SetBool("isJumping", false);
         }

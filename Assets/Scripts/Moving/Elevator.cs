@@ -8,10 +8,14 @@ public class Elevator : MovingPlatform
     public ElecDoor bottomDoor;
     public ElecDoor topDoor;
 
+    public AudioClip chimeSound;
+
     bool topFloor = false;
 
     float elevatorSpeed = 2f;
     float topFloorPos = 0f;
+
+    public AudioSource audioSource;
 
     // Start is called before the first frame update
     public override void Start()
@@ -57,6 +61,9 @@ public class Elevator : MovingPlatform
 
     void OpenDestinationDoor()
     {
+        audioSource.Stop();
+        audioSource.PlayOneShot(chimeSound);
+
         elevatorDoor.SetOpen(true);
         if (topFloor)
         {
@@ -85,6 +92,7 @@ public class Elevator : MovingPlatform
         if (topFloor != isTopFloor)
         {
             CloseDoors();
+            audioSource.Play();
             topFloor = isTopFloor;
         }
 

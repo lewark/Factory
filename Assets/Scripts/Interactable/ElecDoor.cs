@@ -16,11 +16,13 @@ public class ElecDoor : MonoBehaviour
 
 
     private BoxCollider boxCollider;
+    private AudioSource audioSource;
 
     // Start is called before the first frame update
     void Start()
     {
         boxCollider = GetComponent<BoxCollider>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -42,6 +44,9 @@ public class ElecDoor : MonoBehaviour
             float doorPos = openProgress * openPos + (1 - openProgress) * closedPos;
 
             SetDoorPos(doorPos);
+        } else if (audioSource != null && audioSource.isPlaying)
+        {
+            audioSource.Stop();
         }
     }
 
@@ -72,6 +77,11 @@ public class ElecDoor : MonoBehaviour
             this.open = open;
             progress = 1 - progress;
             boxCollider.enabled = !open;
+
+            if (audioSource != null)
+            {
+                audioSource.Play();
+            }
         }
     }
 }

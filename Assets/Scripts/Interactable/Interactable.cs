@@ -9,11 +9,14 @@ public class Interactable : MonoBehaviour
 
     public GameObject cursor;
 
+    private AudioSource audioSource;
+
     bool playerNear = false;
 
     // Start is called before the first frame update
     public virtual void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         cursor.SetActive(false);
     }
 
@@ -22,6 +25,10 @@ public class Interactable : MonoBehaviour
     {
         if (playerNear && Input.GetButtonDown("Fire1"))
         {
+            if (audioSource != null)
+            {
+                audioSource.Play();
+            }
             onSwitchTriggered.Invoke();
         }
     }
