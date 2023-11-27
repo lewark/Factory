@@ -19,7 +19,6 @@ public class MusicPlayer : MonoBehaviour
 
     public void PlayTrack(int track)
     {
-        print(track);
         if (track == currentTrack)
         {
             return;
@@ -30,6 +29,8 @@ public class MusicPlayer : MonoBehaviour
             source.Stop();
         }
 
+        currentTrack = track;
+
         if (track == -1)
         {
             return;
@@ -38,7 +39,6 @@ public class MusicPlayer : MonoBehaviour
         AudioClip introClip = introClips[track];
         AudioClip loopClip = loopClips[track];
 
-        currentTrack = track;
         source.clip = loopClip;
         source.PlayOneShot(introClip);
         source.PlayScheduled(AudioSettings.dspTime + introClip.length);

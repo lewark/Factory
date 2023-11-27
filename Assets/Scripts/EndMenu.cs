@@ -20,14 +20,16 @@ public class EndMenu : Menu
     override protected void OnMenuShow()
     {
         background.SetActive(true);
-        musicPlayer.PlayTrack(1);
 
         if (hasWon)
         {
+            musicPlayer.PlayTrack(1);
             headerText.text = "The End";
             bodyText.text = "";
         } else
         {
+            musicPlayer.PlayTrack(-1);
+            GetComponent<AudioSource>().Play();
             headerText.text = "Game Over";
             bodyText.text = "You lost the game (but not that one [actually I guess you did lose that one too now, sorry about that])";
         }
