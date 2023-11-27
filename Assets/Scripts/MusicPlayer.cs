@@ -19,6 +19,7 @@ public class MusicPlayer : MonoBehaviour
 
     public void PlayTrack(int track)
     {
+        print(track);
         if (track == currentTrack)
         {
             return;

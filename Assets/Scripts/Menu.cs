@@ -17,6 +17,8 @@ public class Menu : MonoBehaviour
 
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+
+        OnMenuHide();
     }
 
     public void Enable()
@@ -26,5 +28,17 @@ public class Menu : MonoBehaviour
 
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
+
+        OnMenuShow();
+    }
+
+    virtual protected void OnMenuShow()
+    {
+
+    }
+
+    virtual protected void OnMenuHide()
+    {
+
     }
 }

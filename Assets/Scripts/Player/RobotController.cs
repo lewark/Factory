@@ -124,7 +124,6 @@ public class RobotController : MonoBehaviour
 
     public void SetCheckpoint(Vector3 position)
     {
-        print("checkpoint set");
         checkpoint = position;
     }
 

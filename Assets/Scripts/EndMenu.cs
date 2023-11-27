@@ -12,12 +12,12 @@ public class EndMenu : Menu
 
     public bool hasWon = false;
 
-    protected void OnDisable()
+    override protected void OnMenuHide()
     {
         background.SetActive(false);
     }
 
-    protected void OnEnable()
+    override protected void OnMenuShow()
     {
         background.SetActive(true);
         musicPlayer.PlayTrack(1);

@@ -4759,6 +4759,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Menu
       objectReference: {fileID: 0}
+    - target: {fileID: 3339895049692050213, guid: 8632a9677f6cab44193731cacab9c2b6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5160835048810514968, guid: 8632a9677f6cab44193731cacab9c2b6, type: 3}
       propertyPath: player
       value: 
