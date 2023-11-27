@@ -8,6 +8,7 @@ public class EndMenu : Menu
     public TMPro.TMP_Text bodyText;
     public GameObject background;
     public RobotController player;
+    public MusicPlayer musicPlayer;
 
     public bool hasWon = false;
 
@@ -19,6 +20,7 @@ public class EndMenu : Menu
     protected void OnEnable()
     {
         background.SetActive(true);
+        musicPlayer.PlayTrack(1);
 
         if (hasWon)
         {
@@ -43,7 +45,9 @@ public class EndMenu : Menu
         {
             UnityEngine.SceneManagement.SceneManager.LoadScene("Factory");
         }
-        else {
+        else
+        {
+            musicPlayer.PlayTrack(0);
             player.GoToCheckpoint();
         }
     }
