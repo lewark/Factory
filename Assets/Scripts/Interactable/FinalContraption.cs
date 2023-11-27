@@ -17,8 +17,11 @@ public class FinalContraption : MonoBehaviour
     public GameObject gearParent;
     public GameObject gearPrefab;
 
+    private AudioSource source;
+
     public float accel = 2f;
     public float topSpeed = 10;
+    public float maxVolume = 0.5f;
 
     bool rotating = false;
     float speed = 0;
@@ -28,6 +31,7 @@ public class FinalContraption : MonoBehaviour
     void Start()
     {
         fakePlayer.SetActive(false);
+        source = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -55,9 +59,12 @@ public class FinalContraption : MonoBehaviour
                 largeGear.speed = Random.Range(-10, 10);
 
             }
+
+            source.volume = Mathf.Pow(speed / topSpeed, 2.0f) * maxVolume;
                 
             if (speed >= topSpeed)
             {
+                source.Stop();
                 endMenu.hasWon = true;
                 endMenu.Enable();
                 rotating = false;
@@ -73,5 +80,7 @@ public class FinalContraption : MonoBehaviour
         mainCamera.enabled = false;
         contraptionCamera.enabled = true;
         rotating = true;
+        source.volume = 0.0f;
+        source.Play();
     }
 }
